@@ -15,7 +15,10 @@ export interface Score {
     providedIn: 'root'
 })
 export class GameService {
-    private apiUrl = '/api/game';
+    private get apiUrl() {
+        return window.location.port === '4200' ? 'http://localhost:5000/api/game' : '/api/game';
+    }
+
 
     constructor(private http: HttpClient) { }
 

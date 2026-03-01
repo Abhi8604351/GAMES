@@ -8,7 +8,10 @@ import { Score } from './game.service';
     providedIn: 'root'
 })
 export class AdminService {
-    private apiUrl = '/api/admin';
+    private get apiUrl() {
+        return window.location.port === '4200' ? 'http://localhost:5000/api/admin' : '/api/admin';
+    }
+
 
     constructor(private http: HttpClient) { }
 

@@ -15,7 +15,10 @@ export interface User {
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = '/api/auth';
+    private get apiUrl() {
+        return window.location.port === '4200' ? 'http://localhost:5000/api/auth' : '/api/auth';
+    }
+
     currentUser = signal<User | null>(this.getUserFromStorage());
 
     constructor(private http: HttpClient, private router: Router) { }
