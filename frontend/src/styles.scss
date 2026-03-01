@@ -1,0 +1,161 @@
+// Gaming Color Palette
+$primary: #00f2ff;
+$secondary: #7000ff;
+$accent: #ff00c8;
+$bg-dark: #050507;
+$bg-card: #0d0d12;
+$text-main: #f0f0f5;
+$text-dim: #8a8a9e;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: $bg-dark;
+    color: $text-main;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+// Neon Glow System
+.glow-blue {
+    text-shadow: 0 0 10px rgba($primary, 0.8), 0 0 20px rgba($primary, 0.4);
+}
+
+.glow-purple {
+    text-shadow: 0 0 10px rgba($secondary, 0.8), 0 0 20px rgba($secondary, 0.4);
+}
+
+.glow-pink {
+    text-shadow: 0 0 10px rgba($accent, 0.8), 0 0 20px rgba($accent, 0.4);
+}
+
+.neon-border {
+    border: 1px solid rgba($primary, 0.2);
+    box-shadow: inset 0 0 15px rgba($primary, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover {
+        border-color: rgba($primary, 0.6);
+        box-shadow: 0 0 25px rgba($primary, 0.15), inset 0 0 10px rgba($primary, 0.1);
+    }
+}
+
+// Advanced Animations
+@keyframes pulse-glow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba($primary, 0.2);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgba($primary, 0.4);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba($primary, 0.2);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-fade-in {
+    animation: slide-in 0.6s backwards;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+// Modern Arcade Grid
+.arcade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: $bg-card;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, $primary, transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+    }
+
+    &:hover::before {
+        transform: translateX(100%);
+    }
+
+    .card-img {
+        height: 180px;
+        background: linear-gradient(45deg, #1a1a2e, #0f0f1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: rgba($primary, 0.3);
+        transition: all 0.5s ease;
+    }
+
+    &:hover .card-img {
+        color: $primary;
+        transform: scale(1.1);
+    }
+}
+
+// Glassmorphism Shared
+.glass {
+    background: rgba(20, 20, 25, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
