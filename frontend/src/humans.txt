@@ -1,0 +1,16 @@
+/* TEAM */
+Lead Architect & Designer: Abhishek Singh
+GitHub: https://github.com/Abhi8604351
+
+/* SITE */
+Last update: 2026-03-01
+Language: English
+Doctype: HTML5
+IDE: Antigravity Code Assistant
+Stack: MEAN (MongoDB, Express, Angular, Node)
+Philosophy: Created by a Human, for the enjoyment of Humans. No AI was harmed in the making of this (though one helped).
+
+/* THANKS */
+Google DeepMind
+The Open Source Community
+All the Gamers

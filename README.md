@@ -81,4 +81,6 @@ FunZone-MEAN/
 10. Reaction Timer Game
 
 ---
-Built with ❤️ by Antigravity
+Designed & Engineered by **Abhishek Singh** 🛠️
+Made by Human. Crafted with Precision. 🎮
+[https://github.com/Abhi8604351](https://github.com/Abhi8604351)
